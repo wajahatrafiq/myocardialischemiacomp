@@ -6,25 +6,25 @@ from streamlit_extras.switch_page_button import switch_page
 from streamlit_extras.stateful_button import button
 from streamlit_extras.add_vertical_space import add_vertical_space
 
-st.set_page_config(page_title="MIC Predictor", page_icon='FAVICON.png', layout="wide", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title="MIC Predictor", page_icon='heartline.jpg', layout="wide", initial_sidebar_state="auto", menu_items=None)
 
 with st.sidebar:
     mention(
-        label="Io Diakou @GitHub",
+        label="WajahatRafiq @GitHub",
         icon="github",
-        url="https://github.com/IoDiakou",
+        url="https://github.com/wajahatrafiq",
     )
     
 
 
 #st.markdown("<h1 style='text-align: center; color: black;'>Heart attack complications prediction</h1>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center; color: black;'>CYRENE: Σύστημα πρόβλεψης ιατρικών επιπλοκών για ασθενείς με έμφραγμα</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: black;'>Heart attack complications predictor</h2>", unsafe_allow_html=True)
 st.markdown("***")
 
-explain = st.button("Πώς λειτουργεί το CYRENE;", type='primary', use_container_width=True)
+explain = st.button("Working of MIC", type='primary', use_container_width=True)
 if explain:
-    switch_page("cyrene")
-st.markdown("<h3 style='text-align: center; color: black;'>Παρακαλώ εισαγάγετε τα στοιχεία του ασθενούς</h3>", unsafe_allow_html=True)
+    switch_page("mic")
+st.markdown("<h3 style='text-align: center; color: black;'>MIC: Myocardial Ischemia Complications Predictor</h3>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center; color: black;'>Please enter the necessary patient information</h4>", unsafe_allow_html=True)
 st.markdown("***")
 ### SEX ###
@@ -32,24 +32,24 @@ sex_display = ("Female", "Male")
 
 options = list(range(len(sex_display)))
 
-SEX = st.selectbox("Φύλο | Gender", options, format_func=lambda x: sex_display[x])
+SEX = st.selectbox("Gender", options, format_func=lambda x: sex_display[x])
 
 ### - ###
 
 ### AGE ###
-AGE = st.slider("Ηλικία | Age", 1, 100, 1)
+AGE = st.slider("Age", 1, 100, 1)
 ### - ###
 
 ### INF_ANAM ###
 inf_anam_options = (0, 1, 2, 3)
-INF_ANAM = st.selectbox("Αριθμός προηγούμενων εμφραγμάτων | Number of previous myocardial infarctions", inf_anam_options)
+INF_ANAM = st.selectbox("Number of previous myocardial infarctions", inf_anam_options)
 
 ### STENOK_AN ###
 exert_angina_display = ("Never", "During the last year", "1 year ago", "2 years ago", "3 years ago", "4-5 years ago", "More than 5 years ago")
 
 exert_angina_options = list(range(len(exert_angina_display)))
 
-STENOK_AN = st.selectbox("Σταθερή στηθάγχη | Incidence of chest pain after exertion", exert_angina_options, format_func=lambda x: exert_angina_display[x])
+STENOK_AN = st.selectbox("Incidence of chest pain after exertion", exert_angina_options, format_func=lambda x: exert_angina_display[x])
 
 ### - ###
 
@@ -64,7 +64,7 @@ FK_STENOK = 2
 ibs_post_display = ("None", "Exertional chest pain", "Unstable chest pain")
 ibs_post_options = list(range(len(ibs_post_display)))
 
-IBS_POST = st.selectbox("Συμπτώματα καρδιακής νόσου ημέρες ή εβδομάδες πριν την εισαγωγή στο νοσοκομείο | Coronary heart disease symptoms days or weeks before admission to hospital", ibs_post_options, format_func=lambda x: ibs_post_display[x])
+IBS_POST = st.selectbox("Coronary heart disease symptoms days or weeks before admission to hospital", ibs_post_options, format_func=lambda x: ibs_post_display[x])
 
 ### - ###
 
@@ -72,7 +72,7 @@ IBS_POST = st.selectbox("Συμπτώματα καρδιακής νόσου ημ
 gb_display = ("None", "Stage 1", "Stage 2", "Stage 3")
 gb_options = list(range(len(gb_display)))
 
-GB = st.selectbox("Υπέρταση | Presence of essential hypertension", gb_options, format_func=lambda x: gb_display[x])
+GB = st.selectbox("Presence of essential hypertension", gb_options, format_func=lambda x: gb_display[x])
 
 ### - ###
 
@@ -90,7 +90,7 @@ DLIT_AG = 0
 zsn_display = ("None", "Stage 1", "Heart failure due to right ventricular systolic dysfunction", "Heart failure due to left ventricular systolic dysfunction", "Heart failure due to both left and right dysfunction")
 zsn_options = list(range(len(zsn_display)))
 
-ZSN_A = st.selectbox("Ιστορικό χρόνιας καρδιοπάθειας | History of chronic heart failure", zsn_options, format_func=lambda x: zsn_display[x])
+ZSN_A = st.selectbox("History of chronic heart failure", zsn_options, format_func=lambda x: zsn_display[x])
 
 ### - ###
 
@@ -121,7 +121,7 @@ endocr_03 = 0
 zab_display = ("No", "Yes")
 zab_options = list(range(len(zab_display)))
 
-zab_leg_01 = st.radio("Ιστορικό χρόνιας βρογχίτιδας | History of chronic bronchitis", zab_options, format_func=lambda x: zab_display[x])
+zab_leg_01 = st.radio("History of chronic bronchitis", zab_options, format_func=lambda x: zab_display[x])
 
 ### other zab_leg ###
 zab_leg_02 = 0
@@ -130,13 +130,13 @@ zab_leg_04 = 0
 zab_leg_06 = 0
 
 ### metrics ####
-S_AD_KBRIG = st.number_input("Συστολική πίεση κατά την μέτρηση από την καρδιολογική ομάδα στα έκτακτα | Systolic blood pressure measured by the Emergency Cardiology Team", min_value=1, max_value=180, step=10)
+S_AD_KBRIG = st.number_input("Systolic blood pressure measured by the Emergency Cardiology Team", min_value=1, max_value=180, step=10)
 
-D_AD_KBRIG = st.number_input("Διαστολική πίεση κατά την μέτρηση από την καρδιολογική ομάδα στα έκτακτα | Diastolic blood pressure measured by the Emergency Cardiology Team", min_value=1, max_value=100, step=10)
+D_AD_KBRIG = st.number_input("Diastolic blood pressure measured by the Emergency Cardiology Team", min_value=1, max_value=100, step=10)
 
-S_AD_ORIT = st.number_input("Συστολική πίεση κατά την μέτρηση στην εντατική | Systolic blood pressure measured at intensive care unit", min_value=1, max_value=180, step=10)
+S_AD_ORIT = st.number_input("Systolic blood pressure measured at intensive care unit", min_value=1, max_value=180, step=10)
 
-D_AD_ORIT = st.number_input("Διαστολική πίεση κατά την μέτρηση στην εντατική | Diastolic blood pressure measured at intensive care unit", min_value=1, max_value=100, step=10)
+D_AD_ORIT = st.number_input("Diastolic blood pressure measured at intensive care unit", min_value=1, max_value=100, step=10)
 
 ### post ###
 O_L_POST = 0
@@ -207,7 +207,7 @@ ROE = 15
 time_bs_display = ("Less than 2 hours", "2-4 hours", "4-6 hours", "6-8 hours", "8-12 hours", "12-24 hours", "More than 1 day", "More than 2 days", "More than 3 days")
 time_bs_options = list(range(len(time_bs_display)))
 
-TIME_B_S = st.selectbox("Χρόνος από την αρχή του εμφράγματος μέχρι την άφιξη στο νοσοκομείο | Time elapsed from the beginning of the heart attack to the hospital", time_bs_options, format_func=lambda x: time_bs_display[x])
+TIME_B_S = st.selectbox("Time elapsed from the beginning of the heart attack to the hospital", time_bs_options, format_func=lambda x: time_bs_display[x])
 if TIME_B_S == 0:
     TIME_B_S = 1
 else:
@@ -242,7 +242,7 @@ with col4:
 with col5:
     pass
 with col3 :
-    ok = button("Πρόβλεψη των επιπλοκών", type='primary',use_container_width=True, key='button1')
+    ok = button("Complication Prediction", type='primary',use_container_width=True, key='button1')
 
 if ok:
     X_new = [[AGE, SEX, INF_ANAM, STENOK_AN, FK_STENOK, IBS_POST, GB, SIM_GIPERT, DLIT_AG, 
