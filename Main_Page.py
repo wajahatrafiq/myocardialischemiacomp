@@ -285,7 +285,7 @@ if ok:
     prediction_18 = round(prediction[0][18]*100,2)
 
     font_size = 22
-    result_11 = f'Πιθανότητα επιβίωσης ασθενούς δεδομένων των επιπλοκών: {prediction_11} %'
+    result_11 = f'survival chances as per the complications: {prediction_11} %'
     html_11 = f"""
     <style>
     p.a {{
@@ -298,7 +298,7 @@ if ok:
 
     st.markdown(html_11, unsafe_allow_html=True)
 
-    result_0 = f'Κολπική μαρμαρυγή: {prediction_0} %'
+    result_0 = f'Atrial fibrillation: {prediction_0} %'
     font_size = 22
     html_0 = f"""
     <style>
@@ -312,7 +312,7 @@ if ok:
 
     st.markdown(html_0, unsafe_allow_html=True)
 
-    result_1 = f'Υπερκοιλιακή ταχυκαρδία: {prediction_1} %'
+    result_1 = f'Supraventricular tachycardia: {prediction_1} %'
     html_1 = f"""
     <style>
     p.a {{
@@ -325,7 +325,7 @@ if ok:
 
     st.markdown(html_1, unsafe_allow_html=True)
 
-    result_2 = f'Κοιλιακή ταχυκαρδία: {prediction_2} %'
+    result_2 = f'Ventricular tachycardia: {prediction_2} %'
     html_2 = f"""
     <style>
     p.a {{
@@ -338,7 +338,7 @@ if ok:
 
     st.markdown(html_2, unsafe_allow_html=True)
 
-    result_3 = f'Κοιλιακή μαρμαρυγή: {prediction_3} %'
+    result_3 = f'Ventricular fibrillation: {prediction_3} %'
     html_3 = f"""
     <style>
     p.a {{
@@ -351,7 +351,7 @@ if ok:
 
     st.markdown(html_3, unsafe_allow_html=True)
 
-    result_4 = f'Kοιλιακός αποκλεισμός: {prediction_4} %'
+    result_4 = f'Ventricular block: {prediction_4} %'
     html_4 = f"""
     <style>
     p.a {{
@@ -364,7 +364,7 @@ if ok:
 
     st.markdown(html_4, unsafe_allow_html=True)
 
-    result_5 = f'Πνευμονικό οίδημα: {prediction_5} %'
+    result_5 = f'Pulmonary edema: {prediction_5} %'
     html_5 = f"""
     <style>
     p.a {{
@@ -377,7 +377,7 @@ if ok:
 
     st.markdown(html_5, unsafe_allow_html=True)
 
-    result_6 = f'Ρήξη μυοκαρδίου: {prediction_6} %'
+    result_6 = f'Myocardial rupture: {prediction_6} %'
     html_6 = f"""
     <style>
     p.a {{
@@ -390,7 +390,7 @@ if ok:
 
     st.markdown(html_6, unsafe_allow_html=True)
 
-    result_7 = f'Σύνδρομο Dressler: {prediction_7} %'
+    result_7 = f'Dressler syndrome: {prediction_7} %'
     html_7 = f"""
     <style>
     p.a {{
@@ -403,7 +403,7 @@ if ok:
 
     st.markdown(html_7, unsafe_allow_html=True)
 
-    result_8 = f'Καρδιακή ανεπάρκεια: {prediction_8} %'
+    result_8 = f'Heart failure: {prediction_8} %'
     html_8 = f"""
     <style>
     p.a {{
@@ -416,7 +416,7 @@ if ok:
 
     st.markdown(html_8, unsafe_allow_html=True)
     
-    result_9 = f'Υποτροπή εμφράγματος: {prediction_9} %'
+    result_9 = f'Heart attack recurrence: {prediction_9} %'
     html_9 = f"""
     <style>
     p.a {{
@@ -429,7 +429,7 @@ if ok:
 
     st.markdown(html_9, unsafe_allow_html=True)
 
-    result_10 = f'Μετεμφραγματική στηθάγχη: {prediction_10} %'
+    result_10 = f'Staphylococcal angina: {prediction_10} %'
     html_10 = f"""
     <style>
     p.a {{
@@ -442,7 +442,7 @@ if ok:
 
     st.markdown(html_10, unsafe_allow_html=True)
 
-    result_12 = f'Θανατηφόρο καρδιακό σοκ: {prediction_12} %'
+    result_12 = f'Fatal cardiac shock: {prediction_12} %'
     html_12 = f"""
     <style>
     p.a {{
@@ -455,7 +455,7 @@ if ok:
 
     st.markdown(html_12, unsafe_allow_html=True)
     
-    result_13 = f'Θανατηφόρο πνευμονικό οίδημα: {prediction_13} %'
+    result_13 = f'Fatal pulmonary edema: {prediction_13} %'
     html_13 = f"""
     <style>
     p.a {{
@@ -468,7 +468,7 @@ if ok:
 
     st.markdown(html_13, unsafe_allow_html=True)
 
-    result_14 = f'Θανατηφόρα καρδιακή ρήξη: {prediction_14} %'
+    result_14 = f'Fatal cardiac rupture: {prediction_14} %'
     html_14 = f"""
     <style>
     p.a {{
@@ -481,7 +481,7 @@ if ok:
 
     st.markdown(html_14, unsafe_allow_html=True)
 
-    result_15 = f'Θανατηφόρα καρδιακή ανεπάρκεια: {prediction_15} %'
+    result_15 = f'Fatal heart failure: {prediction_15} %'
     html_15 = f"""
     <style>
     p.a {{
@@ -494,7 +494,7 @@ if ok:
 
     st.markdown(html_15, unsafe_allow_html=True)
 
-    result_16 = f'Θανατηφόρα θρομβοεμβολή: {prediction_16} %'
+    result_16 = f'Fatal thromboembolism: {prediction_16} %'
     html_16 = f"""
     <style>
     p.a {{
@@ -507,7 +507,7 @@ if ok:
 
     st.markdown(html_16, unsafe_allow_html=True)
 
-    result_17 = f'Θανατηφόρα ασυστολή: {prediction_17} %'
+    result_17 = f'Lethal Restraint: {prediction_17} %'
     html_17 = f"""
     <style>
     p.a {{
@@ -520,7 +520,7 @@ if ok:
 
     st.markdown(html_17, unsafe_allow_html=True)
 
-    result_18 = f'Θανατηφόρα κοιλιακή μαρμαρυγή: {prediction_18} %'
+    result_18 = f'Fatal ventricular fibrillation: {prediction_18} %'
     html_18 = f"""
     <style>
     p.a {{
@@ -546,7 +546,7 @@ if ok:
     with col5:
         pass
     with col3 :
-        show_me = button("Δείξε μου πώς βλέπει το CYRENE τα δεδομένα που εισήγαγα", type='primary', use_container_width=True, key='button2')
+        show_me = button("Data Entry", type='primary', use_container_width=True, key='button2')
 
     add_vertical_space(2)
 
