@@ -6,7 +6,7 @@ from streamlit_extras.switch_page_button import switch_page
 from streamlit_extras.stateful_button import button
 from streamlit_extras.add_vertical_space import add_vertical_space
 
-st.set_page_config(page_title="CYRENE: Heart Attack Complications Prediction System", page_icon='FAVICON.png', layout="wide", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title="MIC Predictor", page_icon='FAVICON.png', layout="wide", initial_sidebar_state="auto", menu_items=None)
 
 with st.sidebar:
     mention(
